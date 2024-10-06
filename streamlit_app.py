@@ -25,7 +25,7 @@ if st.button("요약하기"):
     if input_text:
         try:
             # Langchain 프롬프트 생성 및 요약 요청
-            prompt = PromptTemplate(input_variables=["text"], template="요약해줘: {text}")
+            prompt = PromptTemplate(input_variables=["text"], template="다음 내용을 요약해줘: {text}")
             summary = llm.invoke(prompt.format(text=input_text))
             
             # 요약 결과 출력
